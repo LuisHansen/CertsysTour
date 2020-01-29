@@ -61,22 +61,22 @@
 
     <a-entity id="camera-rig" id="fallback">
         <!--Fallback for debugging -->
-        <a-entity controls camera active="true">
+        <a-entity controls >
 
-            <a-entity id="controlers" oculus-go-controls gearvr-controls orientationOffset="0 0 0">
+<!--             <a-entity id="controlers" camera active="false" oculus-go-controls gearvr-controls orientationOffset="0 0 0">
                 <a-entity id="laser" cursor="fuse: false" line="color: #FF0099"
                 raycaster="showLine: true; objects: .clickable" >
                 </a-entity>
-            </a-entity> 
+            </a-entity> -->
 
-<!--             <a-entity camera id="fallback2" active="true" look-controls wasd-controls enabled="true" >
+            <a-entity camera id="fallback2" active="true" look-controls wasd-controls enabled="true" >
                 <a-entity cursor="fuse: true; fuseTimeout: 500"
                     position="0 0 -1"
                     geometry="primitive: ring; radiusInner: 0.015; radiusOuter: 0.025"
                     material="color: black; shader: flat">
-                   <a-text id="debug" value="Hello, World!" position="0 0 -1"></a-text>
-                </a-entity> 
-            </a-entity> -->
+                    <!-- <a-text id="debug" value="Hello, World!" position="0 0 -1"></a-text> -->
+                </a-entity>
+            </a-entity>
 
         </a-entity>
 
