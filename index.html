@@ -38,11 +38,15 @@
     <a-entity id="texticulo" visible="false" position="80.03941 -2.73998 -6.13911" geometry="primitive: plane; width: 0.61; height: 0.102" material="color: #eee" text="color: #000000; align: center; value: Navegar para fundos; width: 2; lineHeight: 1.47; wrapCount: 56; zOffset: 0.01" scale="20 20 20"  rotation="0 -90 0">
     </a-entity>
 
-    <a-entity controls id="controlers" camera active="false" oculus-go-controls gearvr-controls orientationOffset="0 0 0">
+<!--     <a-entity controls id="controlers" camera active="false" oculus-go-controls gearvr-controls orientationOffset="0 0 0">
         <a-entity id="laser" cursor="fuse: false" line="color: #FF0099"
         raycaster="showLine: true; objects: .clickable" >
         </a-entity>
-    </a-entity>
+    </a-entity> -->
+
+    <a-entity controls laser-controls="hand: left"></a-entity>
+    <a-entity laser-controls="hand: right"></a-entity>
+
     <a-entity id="camera-rig">
     </a-entity>
     <!-- <a-entity id="camera-rig"> -->
