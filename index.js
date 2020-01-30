@@ -6,7 +6,7 @@ let globalState = {
 
 let utils = {
 
-	transforms: {
+	cameraTransforms: {
 		'portas': {
 			'entrada': {x:0,y:90,z:0}
 		},
@@ -23,7 +23,7 @@ let utils = {
 			'entrada': {x:0,y:140,z:0}
 		},
 		'salinha': {
-			'sala': {x:0,y:0,z:0}
+			'sala': {x:0,y:-120,z:0}
 		},
 		'sala' : {
 			'entrada': {x:0,y:100,z:0},
@@ -43,7 +43,7 @@ let utils = {
 		'portas':[{id:'#portas-entrada', position:{x:65,y:-3,z:9}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'entrada'}],
 		'entrada':[{id:'#entrada-sala', position:{x:-3,y:-3,z:-91}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'sala'}, {id:'#entrada-portas', position:{x:80,y:-6,z:0}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'portas'}, {id:'#entrada-reuniao', position:{x:29,y:-3,z:-25}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'reuniao'}, {id:'#entrada-descompressao', position:{x:-17,y:-4,z:-36}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'descompressao'}],
 		'reuniao':[{id:'#reuniao-entrada', position:{x:15,y:-3,z:-2}, rotation: {x:0,y:-74,z:0}, tipo:'teleport', destino:'entrada'}],
-		'descompressao':[{id:'#descompressao-entrada', position:{x:33,y:0,z:33}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'entrada'}],
+		'descompressao':[{id:'#descompressao-entrada', position:{x:35,y:0,z:-34}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'entrada'}],
 		'salinha':[{id:'#salinha-sala', position:{x:15,y:-1,z:2}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'sala'}],
 		'sala':[{id:'#sala-entrada', position:{x:14,y:7,z:-106}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'entrada'},{id:'#sala-meio', position:{x:-74,y:8,z:9}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'meio'},{id:'#sala-salinha', position:{x:20,y:3,z:-56}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'salinha'}],
 		'meio':[{id:'#meio-fundos', position:{x:80,y:-6,z:-6}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'fundos'}, {id:'#meio-sala', position:{x:-78,y:-6,z:33}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala'}],
@@ -83,7 +83,7 @@ let utils = {
 					{'class':'clickable pinpoint'},
 					{'src':'#marker'},
 					{'material':'opacity: 0.8; transparent: true; depthTest: false; depthWrite: false; fog: false; shader: flat'},
-					{'geometry':'radius: 2'},
+					{'geometry':'radius: 2.5'},
 					{'scale':''}
 			];
 
@@ -129,7 +129,7 @@ let utils = {
 		// Faz as transformações necessárias na câmera para o novo domo
 		// domoNovo.setAttribute('position', {x: 0, y: 0, z: 0});
 		domoNovo.setAttribute('visible', true);
-		document.querySelector("#camera-rig").setAttribute('rotation',utils.transforms[nomeDomoAtual][nomeDomoNovo])
+		document.querySelector("#camera-rig").setAttribute('rotation',utils.cameraTransforms[nomeDomoAtual][nomeDomoNovo])
 
 		// Tira o domo antigo do caminho
 		// domoAtual.setAttribute('position', {x: 400, y: 0, z: 0});
