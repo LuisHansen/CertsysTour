@@ -52,11 +52,12 @@
         <a-entity laser-controls="hand: left"></a-entity>
 
         <a-entity camera id="camera-controls" controls look-controls>
-            <a-entity cursor="fuse: true; fuseTimeout: 500"
+            <a-entity id="fuse" cursor="fuse: true; fuseTimeout: 500"
             position="0 0 -1"
             geometry="primitive: ring; radiusInner: 0.015; radiusOuter: 0.025"
             material="color: black; shader: flat">
             </a-entity>
+            <a-text id="debug" value="fuse" position="0 0 -1"></a-text>
         </a-entity>
     </a-entity>
     <!-- <a-entity id="camera-rig"> -->
@@ -74,7 +75,7 @@
                     position="0 0 -1"
                     geometry="primitive: ring; radiusInner: 0.015; radiusOuter: 0.025"
                     material="color: black; shader: flat">
-                    <a-text id="debug" value="Hello, World!" position="0 0 -1"></a-text>
+                    
                 </a-entity>
             </a-entity> -->
 

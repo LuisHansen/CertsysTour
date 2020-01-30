@@ -183,24 +183,10 @@ AFRAME.registerComponent('cursor-listener', {
 AFRAME.registerComponent('controls', {
   init: function () {
 
-  	if (this.el.sceneEl.systems['tracked-controls-webvr'].controllers.length || this.el.sceneEl.systems['tracked-controls-webxr'].controllers.length) {
-
-		document.querySelector("#fallback").setAttribute('enabled', false);
-  	} 
-  // 	else {
-
-  // 		console.log("vou remover o controle");
-  // 		document.querySelector("#debug").setAttribute('value', "vou remover o controle");
-
-		// document.querySelector("#controlers").setAttribute('enabled', false);
-  // 	}
-
   	this.el.addEventListener('controllerconnected', function (evt) {
-  		document.querySelector("#debug").setAttribute('value', "disable");
-		document.querySelector("#fallback").remove();
-		document.querySelector("#fallback2").setAttribute('active', false);
-		document.querySelector("#fallback2").remove();
-		document.querySelector("#wtf").setAttribute('active', true);
+		document.querySelector("#fuse").remove();
+  		document.querySelector("#debug").setAttribute('value', "no fuse");
+
   	});
 
     this.el.addEventListener('triggerdown', function (evt) {
