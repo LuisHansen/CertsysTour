@@ -8,56 +8,36 @@
     <script src="index.js"></script>
   </head>
   <body>
-    <a-scene>
+    <a-scene scene>
       <a-assets>
         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg" crossorigin="anonymous">
         <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" crossorigin="anonymous">
-        <img id="entrada" src="entrada21.jpg">
-        <img id="sala" src="sala21.jpg">
-        <img id="meio" src="meio21.jpg">
-        <img id="fundos" src="fundos21.jpg">
-        <img id="marker" src="marker.png">
+        <img id="portas" src="ambientes/portas21.jpg">
+        <img id="entrada" src="ambientes/entrada21.jpg">
+        <img id="descompressao" src="ambientes/descompressao21.jpg">
+        <img id="reuniao" src="ambientes/reuniao21.jpg">
+        <img id="salinha" src="ambientes/salinha21.jpg">
+        <img id="sala" src="ambientes/sala21.jpg">
+        <img id="meio" src="ambientes/meio21.jpg">
+        <img id="fundos" src="ambientes/fundos21.jpg">
+        <img id="marker" src="assets/marker.png">
       </a-assets>
       
-      <!-- Pinpoints -->
-    <a-entity id="fundos-meio" visible="false">
-        <a-circle cursor-listener="" visible="" destino="meio" class="clickable" position="-78.68324 27.06913 38.90419" src="#marker" rotation="0 90 0" material="opacity: 0.8; transparent: true; depthTest: false; depthWrite: false; fog: false; shader: flat" geometry="radius: 2" scale="">
-        </a-circle>
-    </a-entity>
-
-    <a-entity id="meio-fundos" visible="false">
-        <a-circle cursor-listener visible="true" destino="fundos" class="clickable" position="80 -6.53434 -6.82182" src="#marker" rotation="0 -90 0" material="opacity: 0.8; transparent: true; depthTest: false; depthWrite: false; fog: false; shader: flat" geometry="radius: 2">
-        </a-circle>
-
-        <a-entity id="texticulo" position="80.03941 -2.73998 -6.13911" geometry="primitive: plane; width: 0.61; height: 0.102" material="color: #eee" text="color: #000000; align: center; value: Navegar para fundos; width: 2; lineHeight: 1.47; wrapCount: 56; zOffset: 0.01" scale="20 20 20" visible="false" rotation="0 -90 0">
-        </a-entity>
-    </a-entity>
-
-    <a-entity id="meio-sala" visible="false">
-        <a-circle cursor-listener="" visible="true" destino="sala" class="clickable" position="-78.68324 -6.53434 33.29761" src="#marker" rotation="0 90 0" material="opacity: 0.8; transparent: true; depthTest: false; depthWrite: false; fog: false; shader: flat" geometry="radius: 2" scale="">
-        </a-circle>
-    </a-entity>
-
-    <a-entity id="sala-meio" visible="false">
-        <a-circle cursor-listener="" visible="" destino="meio" class="clickable" position="-74.51274 8.19991 9.21333" src="#marker" rotation="0 90 0" material="opacity: 0.8; transparent: true; depthTest: false; depthWrite: false; fog: false; shader: flat" geometry="radius: 2" scale="">
-        </a-circle>
-    </a-entity>
-
-    <a-entity id="sala-entrada" visible="false">
-        <a-circle cursor-listener="" visible="true" destino="entrada" class="clickable" position="14.0183 7.415 -106.6538" src="#marker" rotation="" material="opacity: 0.8; transparent: true; depthTest: false; depthWrite: false; fog: false; shader: flat" geometry="radius: 2" scale="">
-        </a-circle>
-    </a-entity>
-
-    <a-entity id="entrada-sala" visible="false">
-        <a-circle cursor-listener="" visible="" destino="sala" class="clickable" position="-3.6094 -3.94026 -91.10842" src="#marker" rotation="" material="opacity: 0.8; transparent: true; depthTest: false; depthWrite: false; fog: false; shader: flat" geometry="radius: 2" scale="">
-        </a-circle>
-    </a-entity>
-
       <!-- Ambientes -->
-      <a-sky id="domo-meio" height="2048" radius="200" src="#meio" theta-length="180" width="2048" position="0 0 -400" dome></a-sky>
-      <a-sky id="domo-entrada" height="2048" radius="200" src="#entrada" theta-length="180" width="2048" position="400 0 0" dome></a-sky>
-      <a-sky id="domo-sala" height="2048" radius="200" src="#sala" theta-length="180" width="2048" position="-400 0 0" dome></a-sky>
-      <a-sky id="domo-fundos" height="2048" radius="200" src="#fundos" theta-length="180" width="2048" position="0 0 400" dome></a-sky>
+      <a-sky id="domo-descompressao" height="2048" radius="200" src="#descompressao" theta-length="180" width="2048" position="0 0 0" dome visible="false"></a-sky>
+      <a-sky id="domo-meio" height="2048" radius="200" src="#meio" theta-length="180" width="2048" position="0 0 0" dome visible="false"></a-sky>
+      <a-sky id="domo-portas" height="2048" radius="200" src="#portas" theta-length="160" width="2048" position="0 0 0" dome visible="false"></a-sky>
+      <a-sky id="domo-entrada" height="2048" radius="200" src="#entrada" theta-length="180" width="2048" position="0 0 0" dome visible="false"></a-sky>
+      <a-sky id="domo-sala" height="2048" radius="200" src="#sala" theta-length="180" width="2048" position="0 0 0" dome visible="false"></a-sky>
+      <a-sky id="domo-salinha" height="2048" radius="200" src="#salinha" theta-length="180" width="2048" position="0 0 0" dome visible="false"></a-sky>
+      <a-sky id="domo-reuniao" height="2048" radius="200" src="#reuniao" theta-length="156" theta-start="24" width="2048" position="0 0 0" dome visible="false"></a-sky>
+      <a-sky id="domo-fundos" height="2048" radius="200" src="#fundos" theta-length="180" width="2048" position="0 0 0" dome visible="false"></a-sky>
+
+      <!-- Pinpoints -->
+
+        <a-entity id="texticulo" visible="false" position="80.03941 -2.73998 -6.13911" geometry="primitive: plane; width: 0.61; height: 0.102" material="color: #eee" text="color: #000000; align: center; value: Navegar para fundos; width: 2; lineHeight: 1.47; wrapCount: 56; zOffset: 0.01" scale="20 20 20"  rotation="0 -90 0">
+        </a-entity>
+
 
     <a-entity id="camera-rig" id="fallback">
         <!--Fallback for debugging -->
