@@ -185,7 +185,7 @@ AFRAME.registerComponent('controls', {
 
   	this.el.addEventListener('controllerconnected', function (evt) {
 		document.querySelector("#fuse").remove();
-  		document.querySelector("#debug").setAttribute('value', "no fuse");
+  		// document.querySelector("#debug").setAttribute('value', "no fuse");
 
   	});
 

@@ -44,20 +44,22 @@
         </a-entity>
     </a-entity> -->
 
-    <a-entity id="camera-rig"  wasd-controls="camera: #camera-controls">
+    <a-entity id="camera-rig"  wasd-controls>
 <!--         <a-entity camera>
         </a-entity> -->
 
-        <a-entity controls laser-controls="hand: right"></a-entity>
-        <a-entity laser-controls="hand: left"></a-entity>
+        <a-entity controls laser-controls="hand: right" raycaster="objects: .clickable"></a-entity>
+        <a-entity laser-controls="hand: left" raycaster="objects: .clickable"></a-entity>
 
         <a-entity camera id="camera-controls" controls look-controls>
             <a-entity id="fuse" cursor="fuse: true; fuseTimeout: 500"
+            enabled="false"
+            raycaster="objects: .clickable"
             position="0 0 -1"
             geometry="primitive: ring; radiusInner: 0.015; radiusOuter: 0.025"
             material="color: black; shader: flat">
             </a-entity>
-            <a-text id="debug" value="fuse" position="0 0 -1"></a-text>
+            <!-- <a-text id="debug" value="fuse" position="0 0 -1"></a-text> -->
         </a-entity>
     </a-entity>
     <!-- <a-entity id="camera-rig"> -->
