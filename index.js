@@ -9,29 +9,29 @@ let utils = {
 	cameraTransforms: {
 		'portas': {
 			'entrada': {x:0,y:90,z:0},
-			'recepcao13': {x:0,y:90,z:0},
+			'recepcao13': {x:0,y:0,z:0},
 			'entrada11': {x:0,y:90,z:0}
 		},
 		'entrada11': {
-			'portas': {x:0,y:0,z:0},
-			'recepcao11': {x:0,y:0,z:0}
+			'portas': {x:0,y:-100,z:0},
+			'recepcao11': {x:0,y:180,z:0}
 		},
 		'recepcao11': {
-			'corredor11': {x:0,y:0,z:0},
-			'entrada11': {x:0,y:0,z:0}
+			'corredor11': {x:0,y:180,z:0},
+			'entrada11': {x:0,y:100,z:0}
 		},
 		'corredor11': {
-			'reuniao11': {x:0,y:0,z:0},
+			'reuniao11': {x:0,y:130,z:0},
 			'sala11': {x:0,y:0,z:0},
-			'recepcao11': {x:0,y:0,z:0}
+			'recepcao11': {x:0,y:170,z:0}
 		},
 		'reuniao11': {
-			'corredor11': {x:0,y:0,z:0}
+			'sala11': {x:0,y:-30,z:0}
 		},
 		'sala11': {
-			'corredor11': {x:0,y:0,z:0},
+			'corredor11': {x:0,y:150,z:0},
 			'salao11': {x:0,y:0,z:0},
-			'augusto11': {x:0,y:0,z:0}
+			'augusto11': {x:0,y:100,z:0}
 		},
 		'augusto11': {
 			'sala11': {x:0,y:0,z:0}
@@ -40,19 +40,19 @@ let utils = {
 			'sala11': {x:0,y:0,z:0}
 		},
 		'recepcao13': {
-			'portas': {x:0,y:0,z:0},
-			'sala13': {x:0,y:0,z:0}
+			'portas': {x:0,y:-100,z:0},
+			'sala13': {x:0,y:190,z:0}
 		},
 		'sala13': {
-			'corredor13': {x:0,y:0,z:0},
+			'corredor13': {x:0,y:-230,z:0},
 			'recepcao13': {x:0,y:0,z:0}
 		},
 		'corredor13': {
-			'sala13': {x:0,y:0,z:0},
-			'descompressao13': {x:0,y:0,z:0}
+			'sala13': {x:0,y:180,z:0},
+			'descompressao13': {x:0,y:-90,z:0}
 		},
 		'descompressao13': {
-			'corredor13': {x:0,y:0,z:0}
+			'corredor13': {x:0,y:120,z:0}
 		},
 		'entrada' : {
 			'sala': {x:0,y:-80,z:0},
@@ -87,27 +87,27 @@ let utils = {
 		'portas':[
 			{id:'#portas-entrada', position:{x:65,y:-3,z:9}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'entrada'},
 			{id:'#portas-recepcao13', position:{x:65,y:-3,z:-19}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'recepcao13'},
-			{id:'#portas-entrada11', position:{x:65,y:-40,z:-19}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'entrada11'},
-			{id:'#testeinfo', text:'CertsysLabs: o laboratorio de inovacao da Certsys!', wrapCount: 15, position:{x:60,y:-3,z:19}, rotation: {x:0,y:-90,z:0}, tipo:'info'}
+			{id:'#portas-entrada11', position:{x:37,y:-3,z:-50}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'entrada11'},
+			{id:'#infoElevador', text:'A Certsys esta dividida em dois andares! Pegue o elevador para conhecer o 11o andar!', wrapCount: 15, position:{x:23,y:-3,z:-48}, rotation: {x:0,y:0,z:0}, tipo:'info'}
 		],
 		
 		'recepcao13':[
-			{id:'#recepcao13-portas', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'portas'},
-			{id:'#recepcao13-sala13', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala13'}
+			{id:'#recepcao13-portas', position:{x:24,y:-3,z:33}, rotation: {x:0,y:180,z:0}, tipo:'teleport', destino:'portas'},
+			{id:'#recepcao13-sala13', position:{x:-78,y:-3,z:-22}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala13'}
 		],
 
 		'sala13':[
-			{id:'#sala13-recepcao13', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'recepcao13'},
-			{id:'#sala13-corredor13', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'corredor13'}
+			{id:'#sala13-recepcao13', position:{x:-78,y:-3,z:-9}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'recepcao13'},
+			{id:'#sala13-corredor13', position:{x:-5,y:-3,z:-73}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'corredor13'}
 		],
 
 		'corredor13':[
-			{id:'#corredor13-sala13', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala13'},
-			{id:'#corredor13-descompressao13', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'descompressao13'}
+			{id:'#corredor13-sala13', position:{x:-68,y:-3,z:52}, rotation: {x:0,y:150,z:0}, tipo:'teleport', destino:'sala13'},
+			{id:'#corredor13-descompressao13', position:{x:93,y:-3,z:-30}, rotation: {x:0,y:-70,z:0}, tipo:'teleport', destino:'descompressao13'}
 		],
 
 		'descompressao13':[
-			{id:'#descompressao13-corredor13', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'corredor13'},
+			{id:'#descompressao13-corredor13', position:{x:54,y:-3,z:-3}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'corredor13'},
 		],
 
 		'entrada':[
@@ -145,37 +145,37 @@ let utils = {
 		],
 
 		'entrada11':[
-			{id:'#entrada11-portas', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'portas'},
-			{id:'#entrada11-recepcao11', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'recepcao11'}
+			{id:'#entrada11-portas', position:{x:-50,y:5,z:35}, rotation: {x:0,y:180,z:0}, tipo:'teleport', destino:'portas'},
+			{id:'#entrada11-recepcao11', position:{x:-70,y:5,z:2}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'recepcao11'}
 		],
 
 		'recepcao11':[
-			{id:'#recepcao11-corredor11', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'corredor11'},
-			{id:'#recepcao11-entrada11', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'entrada11'}
+			{id:'#recepcao11-corredor11', position:{x:26,y:-9,z:59}, rotation: {x:0,y:180,z:0}, tipo:'teleport', destino:'corredor11'},
+			{id:'#recepcao11-entrada11', position:{x:-36,y:-9,z:-67}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'entrada11'}
 		],
 
 		'corredor11':[
-			{id:'#corredor11-reuniao11', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'reuniao11'},
-			{id:'#corredor11-sala11', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala11'},
-			{id:'#corredor11-recepcao11', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'recepcao11'}
+			{id:'#corredor11-reuniao11', position:{x:58,y:5,z:8}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'reuniao11'},
+			{id:'#corredor11-sala11', position:{x:90,y:0,z:-19}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'sala11'},
+			{id:'#corredor11-recepcao11', position:{x:-44,y:5,z:-55}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'recepcao11'}
 		],
 
 		'reuniao11':[
-			{id:'#reuniao11-corredor11', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'corredor11'},
+			{id:'#reuniao11-sala11', position:{x:24,y:0,z:-12}, rotation: {x:0,y:-70,z:0}, tipo:'teleport', destino:'sala11'},
 		],
 
 		'sala11':[
-			{id:'#sala11-corredor11', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'corredor11'},
-			{id:'#sala11-salao11', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'salao11'},
-			{id:'#sala11-augusto11', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'augusto11'}
+			{id:'#sala11-corredor11', position:{x:69,y:0,z:-47}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'corredor11'},
+			{id:'#sala11-salao11', position:{x:-12,y:0,z:76}, rotation: {x:0,y:180,z:0}, tipo:'teleport', destino:'salao11'},
+			{id:'#sala11-augusto11', position:{x:12,y:0,z:-67}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'augusto11'}
 		],
 
 		'augusto11':[
-			{id:'#augusto11-sala11', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala11'},
+			{id:'#augusto11-sala11', position:{x:60,y:0,z:-5}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'sala11'},
 		],
 
 		'salao11':[
-			{id:'#salao11-sala11', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala11'},
+			{id:'#salao11-sala11', position:{x:37,y:4,z:-86}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'sala11'},
 		]
 	},
 
@@ -283,8 +283,8 @@ let utils = {
 		let domoAtual = document.querySelector(`#domo-${nomeDomoAtual}`);
 		let domoNovo = document.querySelector(`#domo-${nomeDomoNovo}`);
 
-		console.log("Saindo de: ", nomeDomoAtual, domoAtual.object3D);
-		console.log("Indo para: ", nomeDomoNovo, domoNovo.object3D);
+		// console.log("Saindo de: ", nomeDomoAtual, domoAtual.object3D);
+		// console.log("Indo para: ", nomeDomoNovo, domoNovo.object3D);
 
 		// Faz as transformações necessárias na câmera para o novo domo
 		// domoNovo.setAttribute('position', {x: 0, y: 0, z: 0});
@@ -301,10 +301,10 @@ let utils = {
 		globalState.selecao = null;
 		globalState.atual = nomeDomoNovo;
 
-		console.log("Domo novo: ", domoNovo.object3D);
-		console.log("Domo antigo: ", domoAtual.object3D);
+		// console.log("Domo novo: ", domoNovo.object3D);
+		// console.log("Domo antigo: ", domoAtual.object3D);
 
-		console.log("troquei");
+		// console.log("troquei");
 	}
 }
 
