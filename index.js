@@ -8,7 +8,51 @@ let utils = {
 
 	cameraTransforms: {
 		'portas': {
-			'entrada': {x:0,y:90,z:0}
+			'entrada': {x:0,y:90,z:0},
+			'recepcao13': {x:0,y:90,z:0},
+			'entrada11': {x:0,y:90,z:0}
+		},
+		'entrada11': {
+			'portas': {x:0,y:0,z:0},
+			'recepcao11': {x:0,y:0,z:0}
+		},
+		'recepcao11': {
+			'corredor11': {x:0,y:0,z:0},
+			'entrada11': {x:0,y:0,z:0}
+		},
+		'corredor11': {
+			'reuniao11': {x:0,y:0,z:0},
+			'sala11': {x:0,y:0,z:0},
+			'recepcao11': {x:0,y:0,z:0}
+		},
+		'reuniao11': {
+			'corredor11': {x:0,y:0,z:0}
+		},
+		'sala11': {
+			'corredor11': {x:0,y:0,z:0},
+			'salao11': {x:0,y:0,z:0},
+			'augusto11': {x:0,y:0,z:0}
+		},
+		'augusto11': {
+			'sala11': {x:0,y:0,z:0}
+		},
+		'salao11': {
+			'sala11': {x:0,y:0,z:0}
+		},
+		'recepcao13': {
+			'portas': {x:0,y:0,z:0},
+			'sala13': {x:0,y:0,z:0}
+		},
+		'sala13': {
+			'corredor13': {x:0,y:0,z:0},
+			'recepcao13': {x:0,y:0,z:0}
+		},
+		'corredor13': {
+			'sala13': {x:0,y:0,z:0},
+			'descompressao13': {x:0,y:0,z:0}
+		},
+		'descompressao13': {
+			'corredor13': {x:0,y:0,z:0}
 		},
 		'entrada' : {
 			'sala': {x:0,y:-80,z:0},
@@ -40,14 +84,99 @@ let utils = {
 	},
 
 	pinpoints: {
-		'portas':[{id:'#portas-entrada', position:{x:65,y:-3,z:9}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'entrada'}],
-		'entrada':[{id:'#entrada-sala', position:{x:-3,y:-3,z:-91}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'sala'}, {id:'#entrada-portas', position:{x:80,y:-6,z:0}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'portas'}, {id:'#entrada-reuniao', position:{x:29,y:-3,z:-25}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'reuniao'}, {id:'#entrada-descompressao', position:{x:-17,y:-4,z:-36}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'descompressao'}],
-		'reuniao':[{id:'#reuniao-entrada', position:{x:15,y:-3,z:-2}, rotation: {x:0,y:-74,z:0}, tipo:'teleport', destino:'entrada'}],
-		'descompressao':[{id:'#descompressao-entrada', position:{x:35,y:0,z:-34}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'entrada'}],
-		'salinha':[{id:'#salinha-sala', position:{x:15,y:-1,z:2}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'sala'}],
-		'sala':[{id:'#sala-entrada', position:{x:14,y:7,z:-106}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'entrada'},{id:'#sala-meio', position:{x:-74,y:8,z:9}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'meio'},{id:'#sala-salinha', position:{x:20,y:3,z:-56}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'salinha'}],
-		'meio':[{id:'#meio-fundos', position:{x:80,y:-6,z:-6}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'fundos'}, {id:'#meio-sala', position:{x:-78,y:-6,z:33}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala'}],
-		'fundos':[{id:'#fundos-meio', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'meio'}]
+		'portas':[
+			{id:'#portas-entrada', position:{x:65,y:-3,z:9}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'entrada'},
+			{id:'#portas-recepcao13', position:{x:65,y:-3,z:-19}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'recepcao13'},
+			{id:'#portas-entrada11', position:{x:65,y:-40,z:-19}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'entrada11'},
+			{id:'#testeinfo', text:'CertsysLabs: o laboratorio de inovacao da Certsys!', wrapCount: 15, position:{x:60,y:-3,z:19}, rotation: {x:0,y:-90,z:0}, tipo:'info'}
+		],
+		
+		'recepcao13':[
+			{id:'#recepcao13-portas', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'portas'},
+			{id:'#recepcao13-sala13', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala13'}
+		],
+
+		'sala13':[
+			{id:'#sala13-recepcao13', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'recepcao13'},
+			{id:'#sala13-corredor13', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'corredor13'}
+		],
+
+		'corredor13':[
+			{id:'#corredor13-sala13', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala13'},
+			{id:'#corredor13-descompressao13', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'descompressao13'}
+		],
+
+		'descompressao13':[
+			{id:'#descompressao13-corredor13', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'corredor13'},
+		],
+
+		'entrada':[
+			{id:'#entrada-sala', position:{x:-3,y:-3,z:-91}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'sala'},
+			{id:'#entrada-portas', position:{x:80,y:-6,z:0}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'portas'},
+			{id:'#entrada-reuniao', position:{x:29,y:-3,z:-25}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'reuniao'},
+			{id:'#entrada-descompressao', position:{x:-17,y:-4,z:-36}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'descompressao'}
+		],
+
+		'reuniao':[
+			{id:'#reuniao-entrada', position:{x:15,y:-3,z:-2}, rotation: {x:0,y:-74,z:0}, tipo:'teleport', destino:'entrada'}
+		],
+
+		'descompressao':[
+			{id:'#descompressao-entrada', position:{x:35,y:0,z:-34}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'entrada'}
+		],
+
+		'salinha':[
+			{id:'#salinha-sala', position:{x:15,y:-1,z:2}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'sala'}
+		],
+
+		'sala':[
+			{id:'#sala-entrada', position:{x:14,y:7,z:-106}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'entrada'},
+			{id:'#sala-meio', position:{x:-74,y:8,z:9}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'meio'},
+			{id:'#sala-salinha', position:{x:20,y:3,z:-56}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'salinha'}
+		],
+
+		'meio':[
+			{id:'#meio-fundos', position:{x:80,y:-6,z:-6}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'fundos'},
+			{id:'#meio-sala', position:{x:-78,y:-6,z:33}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala'}
+		],
+
+		'fundos':[
+			{id:'#fundos-meio', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'meio'}
+		],
+
+		'entrada11':[
+			{id:'#entrada11-portas', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'portas'},
+			{id:'#entrada11-recepcao11', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'recepcao11'}
+		],
+
+		'recepcao11':[
+			{id:'#recepcao11-corredor11', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'corredor11'},
+			{id:'#recepcao11-entrada11', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'entrada11'}
+		],
+
+		'corredor11':[
+			{id:'#corredor11-reuniao11', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'reuniao11'},
+			{id:'#corredor11-sala11', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala11'},
+			{id:'#corredor11-recepcao11', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'recepcao11'}
+		],
+
+		'reuniao11':[
+			{id:'#reuniao11-corredor11', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'corredor11'},
+		],
+
+		'sala11':[
+			{id:'#sala11-corredor11', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'corredor11'},
+			{id:'#sala11-salao11', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'salao11'},
+			{id:'#sala11-augusto11', position:{x:-78,y:40,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'augusto11'}
+		],
+
+		'augusto11':[
+			{id:'#augusto11-sala11', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala11'},
+		],
+
+		'salao11':[
+			{id:'#salao11-sala11', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala11'},
+		]
 	},
 
 	initScene: function(initialRotation) {
@@ -75,14 +204,14 @@ let utils = {
 
 				let attributes = [
 					{'id':pinpoint.id},
+					{'tipo': 'teleport'},
 			    	{'destino':pinpoint.destino},
-					{'id':pinpoint.id},
 					{'position':pinpoint.position},
 					{'rotation':pinpoint.rotation},
 					{'cursor-listener':''},
 					{'class':'clickable pinpoint'},
 					{'src':'#marker'},
-					{'material':'opacity: 0.8; transparent: true; depthTest: false; depthWrite: false; fog: false; shader: flat'},
+					{'material':'opacity: 0.8; transparent: true; depthWrite: false; fog: false; shader: flat'},
 					{'geometry':'radius: 2.5'},
 					{'scale':''}
 			];
@@ -93,12 +222,43 @@ let utils = {
 
 				document.querySelector('a-scene').append(newPinpointDOMelem);
 
+			} else if (pinpoint.tipo == 'info') {
+
+				let attributesText = [
+					{'id':`${pinpoint.id}-text`},
+					{'geometry':'primitive: plane; height: auto; width: auto'},
+					{'material':'color: blue; transparent: false; visible: false'},
+					{'text':`width: 4; wrapCount:${pinpoint.wrapCount}; value:${pinpoint.text}; zOffset: 0.05`},
+					{'visible': 'false'},
+					{'scale':'5 5 5'}
+				];
+
+				let attributesMarker = [
+					{'id':pinpoint.id},
+					{'tipo': 'info'},
+					{'position':pinpoint.position},
+					{'rotation':pinpoint.rotation},
+					{'cursor-listener':''},
+					{'class':'clickable pinpoint'},
+					{'src':'#info'},
+					{'material':'opacity: 0.8; transparent: true; depthTest: false; depthWrite: false; fog: false; shader: flat'},
+					{'geometry':'radius: 2.5'},
+					{'scale':''}
+				];
+
+				let newPinpointMarker = utils.createElement('a-circle',attributesMarker);
+				let newPinpointText = utils.createElement('a-entity',attributesText);
+
+				newPinpointMarker.append(newPinpointText);
+
+				document.querySelector('a-scene').append(newPinpointMarker);
+
 			}
 		});
 	},
 
 	createElement: function(tag, attributes) {
-		let node = document.createElement('a-circle');
+		let node = document.createElement(tag);
 
 		if (attributes && attributes.length) { // Verifica se attributes é realmente uma lista
 
@@ -152,29 +312,50 @@ AFRAME.registerComponent('cursor-listener', {
   init: function () {
 
   	this.el.addEventListener('click', function(evt) {
-  		console.log(this);
-    	globalState.selecao = this.getAttribute("destino");
+  		// console.log("Evento: ", evt);
+  		if (evt.target.getAttribute('tipo') == 'teleport') {
 
-    	utils.trocarDomo(globalState.atual, globalState.selecao);
+	    	globalState.selecao = this.getAttribute("destino");
+
+	    	utils.trocarDomo(globalState.atual, globalState.selecao);
+
+	    }
   	});
 
     this.el.addEventListener('raycaster-intersected', function (evt) {
-    	globalState.selecao = this.getAttribute("destino");
-		
-    	globalState.intersecting = true;
 
 		this.setAttribute('material', 'opacity', 1);
 		this.setAttribute('scale', '1.2 1.2 1.2');
-		
-		// document.querySelector("#texticulo").object3D.visible = true;
+
+  		if (evt.target.getAttribute('tipo') == 'teleport') {
+
+	    	globalState.selecao = this.getAttribute("destino");
+			
+	    	globalState.intersecting = true;
+
+		} else if(evt.target.getAttribute('tipo') == 'info') {
+			evt.target.setAttribute('material', 'visible', 'false');
+			evt.target.children[0].setAttribute('material', 'visible', 'true');
+			evt.target.children[0].object3D.visible = true;
+		}
+
     });
 
     this.el.addEventListener('raycaster-intersected-cleared', function (evt) {
-    	globalState.intersecting = false;
 
 		this.setAttribute('material', 'opacity', 0.8);
 		this.setAttribute('scale', '1 1 1');
-		document.querySelector("#texticulo").object3D.visible = false;
+
+    	if (evt.target.getAttribute('tipo') == 'teleport') {
+
+	    	globalState.intersecting = false;
+
+		} else if(evt.target.getAttribute('tipo') == 'info') {
+			evt.target.setAttribute('material', 'visible', 'true');
+			evt.target.children[0].object3D.visible = false;
+			evt.target.children[0].setAttribute('material', 'visible', 'false');
+		}
+
     });
 
   }
