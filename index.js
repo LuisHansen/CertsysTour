@@ -55,31 +55,36 @@ let utils = {
 			'corredor13': {x:0,y:120,z:0}
 		},
 		'entrada' : {
-			'sala': {x:0,y:-80,z:0},
 			'portas': {x:0,y:-80,z:0},
-			'reuniao': {x:0,y:-150,z:0},
-			'descompressao': {x:0,y:90,z:0}
+			'corredor': {x:0,y:60,z:0},
+			'reuniao': {x:0,y:-150,z:0}
+		},
+		'corredor': {
+			'entrada': {x:0,y:90,z:0},
+			'descompressao': {x:0,y:120,z:0},
+			'sala': {x:0,y:-80,z:0},
+			'salinha': {x:0,y:110,z:0},
 		},
 		'reuniao': {
-			'entrada': {x:0,y:90,z:0}
+			'entrada': {x:0,y:100,z:0}
 		},
 		'descompressao': {
-			'entrada': {x:0,y:140,z:0}
+			'corredor': {x:0,y:50,z:0}
 		},
 		'salinha': {
-			'sala': {x:0,y:-120,z:0}
+			'sala': {x:0,y:-60,z:0}
 		},
 		'sala' : {
-			'entrada': {x:0,y:100,z:0},
+			'corredor': {x:0,y:60,z:0},
 			'meio': {x:0,y:110,z:0},
 			'salinha': {x:0,y:50,z:0}
 		},
 		'meio' : {
 			'sala': {x:0,y:-60,z:0},
-			'fundos': {x: 0, y: 140, z: 0}
+			'fundos': {x: 0, y: 120, z: 0}
 		},
 		'fundos' : {
-			'meio': {x: 0, y: 130, z: 0}
+			'meio': {x: 0, y: 120, z: 0}
 		}
 	},
 
@@ -88,7 +93,7 @@ let utils = {
 			{id:'#portas-entrada', position:{x:65,y:-3,z:9}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'entrada'},
 			{id:'#portas-recepcao13', position:{x:65,y:-3,z:-19}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'recepcao13'},
 			{id:'#portas-entrada11', position:{x:37,y:-3,z:-50}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'entrada11'},
-			{id:'#infoElevador', text:'A Certsys esta dividida em dois andares! Pegue o elevador para conhecer o 11o andar!', wrapCount: 15, position:{x:23,y:-3,z:-48}, rotation: {x:0,y:0,z:0}, tipo:'info', scale: 1}
+			{id:'#infoElevador', text:'A Certsys está dividida em dois andares! Use o elevador para conhecer o 11º andar!', wrapCount: 15, position:{x:23,y:-3,z:-48}, rotation: {x:0,y:0,z:0}, tipo:'info', radius: 2.5, scale: 1}
 		],
 		
 		'recepcao13':[
@@ -111,20 +116,26 @@ let utils = {
 		],
 
 		'entrada':[
-			{id:'#entrada-sala', position:{x:-3,y:-3,z:-91}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'sala'},
-			{id:'#entrada-portas', position:{x:80,y:-6,z:0}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'portas'},
-			{id:'#entrada-reuniao', position:{x:29,y:-3,z:-25}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'reuniao'},
-			{id:'#entrada-descompressao', position:{x:-17,y:-4,z:-36}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'descompressao'}
+			{id:'#entrada-portas', position:{x:70,y:-6,z:9}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'portas'},
+			{id:'#entrada-corredor', position:{x:-27,y:-3,z:-20}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'corredor'},
+			{id:'#entrada-reuniao', position:{x:2,y:-3,z:-20}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'reuniao'},
+		],
+
+		'corredor':[
+			{id:'#corredor-sala', position:{x:43,y:-3,z:-43}, rotation: {x:0,y:-60,z:0}, tipo:'teleport', destino:'sala'},
+			{id:'#corredor-entrada', position:{x:-6,y:-3,z:40}, rotation: {x:0,y:180,z:0}, tipo:'teleport', destino:'entrada'},
+			{id:'#corredor-salinha', position:{x:20,y:-3,z:-56}, rotation: {x:0,y:40,z:0}, tipo:'teleport', destino:'salinha'},
+			{id:'#corredor-descompressao', position:{x:-4,y:-3,z:-36}, rotation: {x:0,y:40,z:0}, tipo:'teleport', destino:'descompressao'}
 		],
 
 		'reuniao':[
 			{id:'#reuniao-entrada', position:{x:15,y:-3,z:-2}, rotation: {x:0,y:-74,z:0}, tipo:'teleport', destino:'entrada'},
-			{id:'#infoPostit', text:'Aqui no Labs, um dos principais materiais de trabalho e o PostIt!', wrapCount: 15, position:{x:-40,y:-3,z:-50}, rotation: {x:0,y:45,z:0}, tipo:'info', scale: 1}
+			{id:'#infoPostit', text:'Aqui no Labs um dos principais materiais de trabalho é o PostIt!', wrapCount: 15, position:{x:-40,y:-3,z:-50}, rotation: {x:0,y:45,z:0}, tipo:'info', radius: 2.5, scale: 1}
 		],
 
 		'descompressao':[
-			{id:'#descompressao-entrada', position:{x:35,y:0,z:-34}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'entrada'},
-			{id:'#infoFifa', text:'Não e raro o pessoal organizar torneios de Fifa aqui na Certsys', wrapCount: 15, position:{x:-9,y:-3,z:47}, rotation: {x:0,y:180,z:0}, tipo:'info', scale: 1}
+			{id:'#descompressao-corredor', position:{x:35,y:0,z:-34}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'corredor'},
+			{id:'#infoFifa', text:'Não é raro acontecerem torneios de videogame aqui na Certsys!', wrapCount: 15, position:{x:-9,y:-3,z:47}, rotation: {x:0,y:180,z:0}, tipo:'info', radius: 2.5, scale: 1}
 		],
 
 		'salinha':[
@@ -132,27 +143,27 @@ let utils = {
 		],
 
 		'sala':[
-			{id:'#sala-entrada', position:{x:14,y:7,z:-106}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'entrada'},
+			{id:'#sala-corredor', position:{x:11,y:6,z:-80}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'corredor'},
 			{id:'#sala-meio', position:{x:-74,y:8,z:9}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'meio'},
 			{id:'#sala-salinha', position:{x:20,y:3,z:-56}, rotation: {x:0,y:0,z:0}, tipo:'teleport', destino:'salinha'},
-			{id:'#infoArmarios', text:'Quer guardar suas coisas na Certsys? Temos armarios pra todo mundo! Pegue uma chave com o pessoal da recepcao ou administrativo!', wrapCount: 20, position:{x:53,y:3,z:-9}, rotation: {x:0,y:-90,z:0}, tipo:'info', scale: 1}
+			{id:'#infoArmarios', text:'Quer guardar suas coisas aqui na Certsys? Peça uma chave para o pessoal da recepcao ou administrativo!', wrapCount: 20, position:{x:53,y:3,z:-9}, rotation: {x:0,y:-90,z:0}, tipo:'info', radius: 2.5, scale: 1.5}
 		],
 
 		'meio':[
 			{id:'#meio-fundos', position:{x:80,y:-6,z:-6}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'fundos'},
 			{id:'#meio-sala', position:{x:-78,y:-6,z:33}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'sala'},
-			{id:'#infoBanheiros', text:'Aqui estao os banheiros e a copa, com agua e microondas para esquentar sua marmita!', wrapCount: 15, position:{x:20,y:-3,z:47}, rotation: {x:0,y:180,z:0}, tipo:'info', scale: 1}
+			{id:'#infoBanheiros', text:'Aqui estão os banheiros e a copa, com água, canecas e microondas para esquentar sua marmita!', wrapCount: 15, position:{x:20,y:-3,z:47}, rotation: {x:0,y:180,z:0}, tipo:'info', radius: 2.8, scale: 1}
 		],
 
 		'fundos':[
-			{id:'#fundos-meio', position:{x:-78,y:27,z:38}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'meio'},
-			{id:'#infoCafe', text:'Aqui nos fundos fica o cantinho do cafe - afinal, cafe nao pode faltar!', wrapCount: 15, position:{x:44,y:5,z:-38}, rotation: {x:2,y:-60,z:-3}, tipo:'info', scale: 1}
+			{id:'#fundos-meio', position:{x:-78,y:-3,z:5}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'meio'},
+			{id:'#infoCafe', text:'Aqui nos fundos fica o cantinho do café - afinal, café não pode faltar!', wrapCount: 15, position:{x:63,y:-3,z:-14}, rotation: {x:0,y:-90,z:0}, tipo:'info', radius: 2.5, scale: 1}
 		],
 
 		'entrada11':[
 			{id:'#entrada11-portas', position:{x:-50,y:5,z:35}, rotation: {x:0,y:180,z:0}, tipo:'teleport', destino:'portas'},
 			{id:'#entrada11-recepcao11', position:{x:-70,y:5,z:2}, rotation: {x:0,y:90,z:0}, tipo:'teleport', destino:'recepcao11'},
-			{id:'#infoAdm', text:'Aqui no 11 ficam o pessoal administrativo, de marketing e a diretoria.', wrapCount: 20, position:{x:-65,y:-4,z:19}, rotation: {x:0,y:90,z:0}, tipo:'info', scale: 1.5}
+			{id:'#infoAdm', text:'Aqui no 11 ficam o pessoal administrativo, de marketing e a diretoria', wrapCount: 20, position:{x:-65,y:-4,z:19}, rotation: {x:0,y:90,z:0}, tipo:'info', radius: 2, scale: 1.5}
 		],
 
 		'recepcao11':[
@@ -178,7 +189,7 @@ let utils = {
 
 		'augusto11':[
 			{id:'#augusto11-sala11', position:{x:60,y:0,z:-5}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'sala11'},
-			{id:'#infoDiretoria', text:'Esta e uma das salas da diretoria. Mas nao se intimide! Sempre que precisar, pode vir conversar!', wrapCount: 15, position:{x:-55,y:-3,z:24}, rotation: {x:0,y:90,z:0}, tipo:'info', scale: 1.5}
+			{id:'#infoDiretoria', text:'Esta é uma das salas da diretoria. Sempre que precisar converar, pode vir aqui - aqui todos se ajudam!', wrapCount: 15, position:{x:-55,y:-3,z:24}, rotation: {x:0,y:90,z:0}, tipo:'info', radius: 2.8, scale: 1.5}
 		],
 
 		'salao11':[
@@ -233,9 +244,9 @@ let utils = {
 
 				let attributesText = [
 					{'id':`${pinpoint.id}-text`},
-					{'geometry':'primitive: plane; height: auto; width: auto'},
-					{'material':'color: blue; transparent: false; visible: false'},
-					{'text':`width: 4; wrapCount:${pinpoint.wrapCount}; value:${pinpoint.text}; zOffset: 0.05`},
+					{'geometry':`primitive: circle; radius: ${pinpoint.radius?pinpoint.radius:2.5}; segments: 64`},
+					{'material':'color: #ff8000; transparent: true; visible: false; opacity: 0.8; shader: flat'},
+					{'text':`width: 4; wrapCount:${pinpoint.wrapCount}; value:${pinpoint.text}; zOffset: 0.05; align: center; font: ./assets/segoe.fnt; fontImage: ./assets/segoe.png`},
 					{'visible': 'false'},
 					{'scale':`${pinpoint.scale*5} ${pinpoint.scale*5} ${pinpoint.scale*5}`}
 				];
