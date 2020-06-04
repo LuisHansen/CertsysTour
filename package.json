@@ -8,7 +8,6 @@
     "deploy": "ghpages"
   },
   "devDependencies": {
-    "ghpages": "0.0.3",
     "live-server": "^1.2.0"
   },
   "keywords": [
