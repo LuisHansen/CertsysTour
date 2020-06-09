@@ -189,7 +189,7 @@ let utils = {
 
 		'augusto11':[
 			{id:'#augusto11-sala11', position:{x:60,y:0,z:-5}, rotation: {x:0,y:-90,z:0}, tipo:'teleport', destino:'sala11'},
-			{id:'#infoDiretoria', text:'Esta é uma das salas da diretoria. Sempre que precisar converar, pode vir aqui - aqui todos se ajudam!', wrapCount: 15, position:{x:-55,y:-3,z:24}, rotation: {x:0,y:90,z:0}, tipo:'info', radius: 2.8, scale: 1.5}
+			{id:'#infoDiretoria', text:'Esta é uma das salas da diretoria. Sempre que precisar conversar, pode vir aqui - aqui todos se ajudam!', wrapCount: 15, position:{x:-55,y:-3,z:24}, rotation: {x:0,y:90,z:0}, tipo:'info', radius: 2.8, scale: 1.5}
 		],
 
 		'salao11':[
