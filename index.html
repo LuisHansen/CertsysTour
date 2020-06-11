@@ -4,6 +4,12 @@
     <meta charset="unicode">
     <title>CertsysTourVR - Alpha 1</title>
     <meta name="description" content="Test-360">
+    <script>
+      let host = "tour.certsys.io";
+      if (window.location.host == host && window.location.protocol != "https:") {
+        window.location.protocol = "https:"
+      }
+    </script>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="index.js"></script>
   </head>
